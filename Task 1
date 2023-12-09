@@ -1,0 +1,116 @@
+a. Print Odd Numbers in an Array:
+
+Anonymous:
+
+const printOddNumbers = (arr) => arr.filter(num => num % 2 !== 0);
+
+IIFE:
+
+(function printOddNumbers(arr) {
+  console.log(arr.filter(num => num % 2 !== 0));
+})(myArray);
+
+b. Convert All Strings to Title Case in a String Array:
+
+Anonymous:
+
+const titleCaseStrings = (arr) => arr.map(str => str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}));
+
+IIFE:
+
+(function titleCaseStrings(arr) {
+  console.log(arr.map(str => str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})));
+})(myArray);
+
+c. Sum of All Numbers in an Array:
+
+Anonymous:
+
+const sumOfNumbers = (arr) => arr.reduce((acc, num) => acc + num, 0);
+
+IIFE:
+
+(function sumOfNumbers(arr) {
+  console.log(arr.reduce((acc, num) => acc + num, 0));
+})(myArray);
+
+d. Return All Prime Numbers in an Array:
+
+Anonymous:
+
+const findPrimes = (arr) => arr.filter(num => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+});
+
+IIFE:
+
+(function findPrimes(arr) {
+  console.log(arr.filter(num => {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }));
+})(myArray);
+
+e. Return All Palindromes in an Array:
+
+Anonymous:
+
+const findPalindromes = (arr) => arr.filter(str => str === str.split('').reverse().join(''));
+
+IIFE:
+
+(function findPalindromes(arr) {
+  console.log(arr.filter(str => str === str.split('').reverse().join('')));
+})(myArray);
+
+
+(function medianOfTwoArrays(arr1, arr2) {
+  const mergedArr = arr1.concat(arr2).sort((a, b) => a - b);
+  const mid = Math.floor(mergedArr.length / 2);
+  console.log((mergedArr[mid] + mergedArr[mid - 1]) / 2);
+})(arr1, arr2);
+
+g. Remove Duplicates from an Array:
+
+Anonymous:
+
+const removeDuplicates = (arr) => [...new Set(arr)];
+
+IIFE:
+
+(function removeDuplicates(arr) {
+  console.log([...new Set(arr)]);
+})(myArray);
+
+h. Rotate an Array by k times:
+
+Anonymous:
+
+const rotateArray = (arr, k) => arr.slice(k).concat(arr.slice(0, k));
+
+IIFE:
+
+(function rotateArray(arr, k) {
+  console.log(arr.slice(k).concat(arr.slice(0, k)));
+})(myArray, k);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

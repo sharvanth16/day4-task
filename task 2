@@ -1,0 +1,26 @@
+Arrow Functions:
+a. Print Odd Numbers in an Array:
+
+const printOddNumbers = (arr) => arr.filter(num => num % 2 !== 0);
+
+b. Convert All Strings to Title Case in a String Array:
+
+const titleCaseStrings = (arr) => arr.map(str => str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()));
+
+c. Sum of All Numbers in an Array:
+
+const sumOfNumbers = (arr) => arr.reduce((acc, num) => acc + num, 0);
+
+d. Return All Prime Numbers in an Array:
+
+const findPrimes = (arr) => arr.filter(num => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+});
+
+e. Return All Palindromes in an Array:
+
+const findPalindromes = (arr) => arr.filter(str => str === str.split('').reverse().join(''));
